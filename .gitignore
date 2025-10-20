@@ -416,3 +416,10 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+#My custom ignore
+Library/
+Temp/
+UserSettings/
+*.csproj
+*.sln
