@@ -1,15 +1,21 @@
+using TrueTrackSystem;
 using UnityEngine;
 
 
 public class GameCycle : MonoBehaviour
 {
+    
     [SerializeField] private TimerView timerView;
+    [SerializeField] RailCreateManager railCreateManager;
+
     [SerializeField] float SetLimitTime = 120f;
     private Timer timer;
     private UIPresenterManager uiPresenterManager;
 
     void Start()
     {
+
+        railCreateManager.Generate();
         // --- コアロジックのタイマー ---
         timer = new Timer(SetLimitTime);
         timer.Start();
@@ -30,4 +36,6 @@ public class GameCycle : MonoBehaviour
         // UIに反映（Presenter → Viewへ）
         uiPresenterManager.UpdateTimer(timer.CurrentTime);
     }
+
+
 }
