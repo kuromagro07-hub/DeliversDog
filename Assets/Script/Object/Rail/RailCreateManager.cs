@@ -29,7 +29,7 @@ namespace TrueTrackSystem
         private SplineContainer splineContainer;
 
         // レールの開始地点
-        Vector3 railStartPosition= new Vector3(15f, -2.2f, 0f);
+        Vector3 railStartPosition = new Vector3(14.5f, -5.0f, -250f);
 
         [ContextMenu("Generate Spline and Rails")]
 
@@ -90,12 +90,12 @@ namespace TrueTrackSystem
             // 階層をきれいにするために空オブジェクトを作成(親)
             GameObject parent = new GameObject("WoodRails");
             parent.transform.SetParent(transform, false);
-            parent.transform.localScale = new Vector3(5f,5f,1f);
+            parent.transform.localScale = new Vector3(5f, 5f, 1f);
 
             // 金属も同様
             GameObject metalparent = new GameObject("MetalRails");
             metalparent.transform.SetParent(transform, false);
-            metalparent.transform.localScale = new Vector3(5, 5, 5);
+            metalparent.transform.localScale = new Vector3(5.7f, 5, 5);
 
 
             Vector3 offsetWoodRailPos = new Vector3(0f, 0f, 5f);
